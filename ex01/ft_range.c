@@ -14,30 +14,20 @@
 #include<unistd.h>
 #include<stdlib.h>
 
-int	*ft_wirte_numbers (int *dest, int min, int max)
-{
-	int	c;
-
-	c = min;
-	while (min < max)
-	{
-		dest[c] = min;
-		c++;
-		min++;
-	}
-	return (dest);
-}
-
 int	*ft_range(int min, int max)
 {
 	int	*dest;
+	int	i;
 
-	dest = malloc(max - min);
-	if (min > max)
+	i = 0;
+	if (min >= max)
+		return (0);
+	dest = (int *)malloc(sizeof(int) * (max - min));
+	while (min < max)
 	{
-		dest = 0;
-		return (dest);
+		dest[i] = min;
+		min++;
+		i++;
 	}
-	else
-		return (ft_wirte_numbers(dest, min, max));
+	return (dest);
 }

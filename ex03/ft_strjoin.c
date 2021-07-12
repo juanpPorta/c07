@@ -6,7 +6,7 @@
 /*   By: jporta <jporta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 08:30:39 by jporta            #+#    #+#             */
-/*   Updated: 2021/07/11 08:45:30 by jporta           ###   ########.fr       */
+/*   Updated: 2021/07/12 20:51:21 by jporta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 		}
 		i++;
 	}
-	dest[c] = '\0';
+	dest[c - 1] = '\0';
 	return (dest);
 }
